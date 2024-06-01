@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 0, 176; /* Main text color #FF00B0 */
+  --background-start-rgb: 255, 240, 102; /* Default background #FFF066 */
+  --background-end-rgb: 51, 51, 51; /* Gray BG #333333 */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: "Fira Code", sans-serif; /* Default Font Fira Code */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.text-secondary {
+  color: #007FFF; /* Second text color #007FF */
+}
