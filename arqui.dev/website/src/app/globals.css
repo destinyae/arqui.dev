@@ -2,15 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 0, 176; /* Main text color #FF00B0 */
-  --background-start-rgb: 255, 240, 102; /* Default background #FFF066 */
-  --background-end-rgb: 51, 51, 51; /* Gray BG #333333 */
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  color: #FF00B0;
+  background: #FFF066 ;
   font-family: "Fira Code", sans-serif; /* Default Font Fira Code */
 }
 
@@ -19,7 +15,9 @@ body {
     text-wrap: balance;
   }
 }
-
+.bg-secondary {
+  color: #333333;
+}
 .text-secondary {
-  color: #007FFF; /* Second text color #007FF */
+  color: #007FFF;
 }
