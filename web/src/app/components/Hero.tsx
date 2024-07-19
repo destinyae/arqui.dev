@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
                 <Logo />
                 <div>
                     <h2 className='text-3xl leading-normal font-firacode font-bold mb-2 text-[#FF00B0]'>
-                        Sua melhor opção de consultoria
+                        Sua melhor opção de consultoria digital para
                     </h2>
                 </div>
                 <div>

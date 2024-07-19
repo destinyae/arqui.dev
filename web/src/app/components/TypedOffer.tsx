@@ -1,24 +1,28 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
+import client from '../sanityClient';
 
 const TypedOffer: React.FC = () => {
   const typedElement = useRef<HTMLSpanElement>(null);
+  const [strings, setStrings] = useState<string[]>([]);
 
   useEffect(() => {
-    if (typedElement.current) {
+    // Fetch data from Sanity
+    client.fetch(`*[_type == "offerList"]{headline}`).then((data) => {
+      const offerStrings = data.map((item: { headline: string }) => item.headline);
+      setStrings(offerStrings);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (typedElement.current && strings.length > 0) {
       const options = {
-        strings: [
-          'Arquitetura de produtos digitais',
-          'Plataformas DevSecOps',
-          'Desenvolvimento de Negócios Digitais',
-          'Infraestrutura em Nuvem',
-          'Gestão de Engenharia de Software'
-        ],
+        strings,
         typeSpeed: 50,
         backSpeed: 50,
-        loop: true
+        loop: true,
       };
 
       const typed = new Typed(typedElement.current, options);
@@ -27,11 +31,11 @@ const TypedOffer: React.FC = () => {
         typed.destroy();
       };
     }
-  }, []);
+  }, [strings]);
 
   return (
-    <span className='text-[#007FFF]' ref={typedElement}></span>)
-  ;
+    <span className='text-[#007FFF]' ref={typedElement}></span>
+  );
 };
 
 export default TypedOffer;
