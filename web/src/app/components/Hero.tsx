@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
                 <div className='py-16'>
                     <div className='pt-4'>
                         <h2 className='text-3xl leading-normal font-firacode font-bold mb-2 text-[#FF00B0]'>
-                            Somos a melhor opção de consultoria digital para
+                            Somos a melhor opção de consultoria tecnológica para
                         </h2>
                     </div>
                     <div  className='pb-4'>
