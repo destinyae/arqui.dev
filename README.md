@@ -4,8 +4,8 @@
 
 ## Projects
 
-- [storybook](./sotrybook/): Storybook with [neo-brutalism UI](https://neo-brutalism-ui-library.vercel.app/)
-- [CMS](./cms/): We use Sanity for our CMS. This subrepo contains the code and deployment of our Sanity studio.
+- [storybook](./storybook/): Storybook with [neo-brutalism UI](https://neo-brutalism-ui-library.vercel.app/)
+- [CMS](./cms/): We use Sanity for our CMS. This sub-repo contains the code and deployment of our Sanity studio.
 - [web](./web/): The webapp and landing-page.
 
 ## Working with this repo
